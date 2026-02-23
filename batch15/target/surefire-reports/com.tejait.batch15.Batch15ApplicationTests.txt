@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.tejait.batch15.Batch15ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.26 s -- in com.tejait.batch15.Batch15ApplicationTests
