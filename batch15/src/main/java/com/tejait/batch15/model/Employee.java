@@ -6,19 +6,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 //@RequiredArgsConstructor
 @Data
-
+@Builder
 @Table(name="employee_b15") // in SQL want custom name 
 @Entity     // spring boot understand this is entity. in project we have 1000 classes, spring boot understand which one is entity.
 public class Employee {	
