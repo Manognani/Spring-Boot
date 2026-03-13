@@ -8,23 +8,23 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
-@RequestMapping("business")
+@RequestMapping("loans")
 public class BusinessProductController {
 
     BusinessProductService service;
 
-    @PostMapping("businessProductSave")
+    @PostMapping("saveProductDetails")
     public ResponseEntity<BusinessProduct> saveProduct(@RequestBody BusinessProduct Bprod){
         BusinessProduct  saveProd= service.saveProduct(Bprod);
         return new ResponseEntity<>(saveProd, HttpStatus.CREATED);
 
     }
-    @GetMapping("getBusinessproducts/{appId}")
-    public ResponseEntity<List<BusinessProduct>> getAllProducts(@PathVariable Integer appId){
-        List<BusinessProduct> allProducts= service.getAllProducts(appId);
+    @GetMapping("getProductDetails/{appId}")
+    public ResponseEntity<BusinessProduct> getAllProducts(@PathVariable Integer appId){
+        BusinessProduct allProducts= service.getAllProducts(appId);
         return ResponseEntity.ok(allProducts);
     }
 }

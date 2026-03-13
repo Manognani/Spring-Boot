@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients
 @SpringBootApplication
+
 public class Batch15Application {
 	
 	private static final Logger logger=LogManager.getLogger(Batch15Application.class);

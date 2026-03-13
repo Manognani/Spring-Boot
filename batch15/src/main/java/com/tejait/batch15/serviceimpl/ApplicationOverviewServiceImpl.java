@@ -20,7 +20,7 @@ public class ApplicationOverviewServiceImpl implements ApplicationOverviewServic
     private final LoansRepository loansRepo;
 
     @Override
-    public ApplicationOverview getOverviewByAppId(int appId) {
+    public ApplicationOverview getOverviewByAppId(Integer appId) {
 
         // Fetch single objects (NOT LIST)
         CompanyDetails company =

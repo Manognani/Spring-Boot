@@ -15,7 +15,7 @@ public class ApplicationOverviewController {
     private ApplicationOverviewService overviewService;
 
     @GetMapping("getOverviewDeatils/{appId}")
-    public ApplicationOverview getOverview(@PathVariable int appId) {
+    public ApplicationOverview getOverview(@PathVariable Integer appId) {
 
         return overviewService.getOverviewByAppId(appId);
     }

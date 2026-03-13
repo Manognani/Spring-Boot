@@ -7,5 +7,5 @@ import java.util.List;
 public interface BusinessProductService {
     BusinessProduct saveProduct(BusinessProduct bprod);
 
-    List<BusinessProduct> getAllProducts(Integer appId);
+    BusinessProduct getAllProducts(Integer appId);
 }

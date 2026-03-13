@@ -1,8 +1,8 @@
 package com.tejait.batch15.model;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Setter
 @Getter
 @Data

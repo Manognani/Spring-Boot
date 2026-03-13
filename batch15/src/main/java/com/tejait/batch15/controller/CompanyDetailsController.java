@@ -6,10 +6,10 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
-@RequestMapping("companydetails")
+@RequestMapping("loans")
 public class CompanyDetailsController {
 
     CompanyDetailsService service;
@@ -21,7 +21,7 @@ public class CompanyDetailsController {
 
     }
 
-    @GetMapping("getByCompanyDetails/{appId}")
+    @GetMapping("getCompanyDetails/{appId}")
     public ResponseEntity<CompanyDetails> getByEmpId(@PathVariable Integer appId) {
         CompanyDetails company = service.getCompanyDetails(appId);
         return ResponseEntity.ok(company);

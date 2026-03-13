@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.*;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("CompanyAddress")
+@RequestMapping("loans")
 public class CompanyAddressController {
 
     CompanyAddressService service;
 
-    @PostMapping("save")
+    @PostMapping("saveCompanyAddress")
     public ResponseEntity<CompanyAddress> saveAddress(@RequestBody CompanyAddress cadds){
         CompanyAddress savedAddress=service.saveAddress(cadds);
         return new ResponseEntity<>(savedAddress, HttpStatus.CREATED);
 
 
     }
-    @GetMapping("getCompany/{appId}")
+    @GetMapping("getCompanyAddress/{appId}")
     public ResponseEntity<CompanyAddress> getCompanyAddress(@PathVariable Integer appId){
         CompanyAddress getCompany=  service.getAdress(appId);
         return ResponseEntity.ok(getCompany);
